@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dma - Projects</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+
+  <div class="page">
+  <div class="container" id="scene">
+      <div class="jumbotron" data-depth="0.3">
+  <h1 class="display-4 center">dma</h1>
+  <p class="lead">Hi, i'm David Allen.</p>
+  <hr class="my-4">
+  <a href="https://github.com/dma-gh" target="_">Github</a>
+
+</div>
+    <div class="bg layer" data-depth="1.0">
+    </div>
+  </div>
+
+  </div>
+</body>
+
+<style>
+
+a {
+  color: white;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-top: 10%;
+  position: fixed;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  pointer-events: auto;
+}
+
+.page {
+  width: 100%;
+  position: fixed;
+}
+
+.container { 
+  width: 100%;
+  height: 250vh;
+  max-height: 100%;
+}
+
+.layer {
+
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0; 
+}
+
+.bg {
+  margin-top: -75%;
+  background-size: cover;
+  background-position: center; 
+  height: 100%;
+  width: 425vh;
+  background-image: url("atlas.jpeg");
+  background-repeat: no-repeat;
+  bottom: 640px;
+  position: absolute;
+  margin-left: -100%;
+}
+
+</style>
+
+<script>
+  var scene = document.getElementById('scene');
+  var parallaxInstance = new Parallax(scene, {
+    scalarX: 10,
+    scalarY: 1 
+});
+</script>
+
+</html>
